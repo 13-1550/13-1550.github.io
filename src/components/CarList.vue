@@ -81,9 +81,9 @@ const cars = [
 <style>
 .car-list {
   display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
-  gap: 60px; /* bigger gap */
+  gap: 60px;
   margin-top: 40px;
 }
 

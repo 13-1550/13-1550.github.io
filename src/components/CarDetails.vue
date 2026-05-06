@@ -346,7 +346,9 @@ const car = cars.find(c => c.id == id)
 </script>
 
 <style>
-
+body{
+    overflow-x: hidden;
+}
  .details {
   min-height: 100vh;
   padding: 20px 20px;
@@ -427,12 +429,12 @@ position:relative;
   align-items: center;   
   text-align: center;
 
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .hero-info h1 {
-
-
+word-break:break-all;
+position: relative;
   font-size: 48px;
   letter-spacing: 1px;
   font-weight: 400;
@@ -472,7 +474,7 @@ letter-spacing: 1px;
   justify-content: center;
   flex-direction: column;
   align-items: center;  
-  margin-bottom: -10px;
+  margin-bottom: -30px;
 
   object-fit: contain;
   object-position: center;
@@ -483,7 +485,6 @@ letter-spacing: 1px;
 .hero-car {
   width: 100%;
   max-width: 900px;
-  margin-bottom: -130px;
   z-index: 2;
 
   object-fit: contain;
@@ -515,7 +516,7 @@ letter-spacing: 1px;
   transform: scaleY(-1);
   opacity: 0.15;
 
-  margin-top: 1px;
+  margin-top: -80px;
 
   filter: blur(4px);
    mask-image: linear-gradient(to bottom,rgba(0,0,0,0.7),transparent 80%);
@@ -552,12 +553,13 @@ letter-spacing: 1px;
 .specs {
   margin-top: 80px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 
   animation-delay: 0.4s;
 
 }
+
 
 .spec-card {
   background: rgba(255,255,255,0.01);
@@ -607,7 +609,7 @@ letter-spacing: 1px;
 .market {
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   gap: 10px;
   margin-top: 50px;
@@ -669,10 +671,10 @@ letter-spacing: 1px;
 
 
 .identity {
-  margin-top: -80px;
   text-align: left;
   color: #666;
   font-size: 13px;
+  margin-top: 20px;
 }
 
 .identity span {
@@ -685,9 +687,11 @@ letter-spacing: 1px;
 
 .engineering {
   margin-top: 40px;
-  display: flex;
+  display: grid;
+  align-self: center;
   justify-content: center;
-  gap: 60px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
   color: #777;
 }
 
@@ -710,6 +714,22 @@ letter-spacing: 1px;
 
 .loss {
   color: #f87171; /* red */
+}
+
+/*desktop/ tablet view */
+@media (min-width: 680px) {
+  .specs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .engineering {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  .market{
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 </style>

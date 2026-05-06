@@ -67,7 +67,7 @@ function goToDetails() {
   position: absolute;
   top: 10px;
   left: 1px;
-  margin: -40px;
+  padding: 0px;
 
   width: 50px;
   z-index: 2;
