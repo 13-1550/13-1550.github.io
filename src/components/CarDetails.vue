@@ -351,15 +351,15 @@ body{
 }
  .details {
   min-height: 100vh;
-  padding: 20px 20px;
+  padding: 20px;
   background: #050505;
   color: white;
 
  display: flex;
  flex-direction: column;
   
-  max-width: none;
-  margin: auto 0;
+
+  margin: 0 auto;
 
 
   animation: fadeIn 0.5s ease;
@@ -396,10 +396,15 @@ position:relative;
   
  display: flex;
   flex-direction: column;
-
+  padding: 0;
+    
   align-items: center;
   text-align: center;
   justify-content: center;
+    align-content: center;
+
+width: 100%;
+margin: 0 auto;
     
   transition: transform 0.2s ease;
   
