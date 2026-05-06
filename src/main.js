@@ -1,7 +1,6 @@
-import './style.css';
-import { createApp } from 'vue';
-import PortfolioPage from './PortfolioPage.vue';
+import './style.css'
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
 
-// Create the Vue application
-const app = createApp(PortfolioPage);
-app.mount('#app');
+createApp(App).use(router).mount('#app')
